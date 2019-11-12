@@ -104,7 +104,7 @@ public class SmsDescribe {
 
         其它地方调用的时候:
         
-             // 首先获取当前手机号的验证码是否存在
+             // 首先获取当前手机号的验证码是否存在(定时任务每分钟遍历一次所有内存中的验证码,超过3分钟验证码被销毁)
              SmsDescribe sms_entity = SMSTimer.verificationCode.get(phone);
            
              //此手机号没有缓存的验证码 或者 验证码匹配不一致
