@@ -115,7 +115,11 @@ public class SmsDescribe {
             
            
             
-#附录:定时任务Scheduled表达式
+#附录:定时任务Scheduled表达式 及 顺序输出sql示例
+
+        /**结果按userId为 6,3,1,4,2顺序输出, 不在是默认的1,2,3,4,6输出, 满足部分业务场景需要 */ 
+        select * from t_user where   t_id in (6,3,1,4,2)   ORDER BY field (6,3,1,4,2) 
+
 
 	每隔5秒执行一次："*/5 * * * * ?"
 
