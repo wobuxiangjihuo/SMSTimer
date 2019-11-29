@@ -144,3 +144,10 @@ public class SmsDescribe {
 	表示周一到周五每天上午10：15执行作业："0 15 10 ? * MON-FRI" 
 
 	表示2002-2006年的每个月的最后一个星期五上午10:15执行："0 15 10 ? 6L 2002-2006"
+
+        //定义一个按一定频率执行的定时任务，每隔1分钟执行一次，延迟1秒执行
+        @Scheduled(fixedRate = 1000 * 60,initialDelay = 1000)
+        public void updatePayRecords() {
+		//执行代码
+        }
+
